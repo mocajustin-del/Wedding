@@ -36,7 +36,7 @@ export const Footer: React.FC = () => {
                     transition={{ delay: 0.3, duration: 0.6 }}
                     className="font-script text-4xl text-primary mb-3"
                 >
-                    Danang & Eva
+                    Jazuli & Alvina
                 </motion.h3>
 
                 <motion.p
@@ -46,7 +46,7 @@ export const Footer: React.FC = () => {
                     transition={{ delay: 0.4, duration: 0.6 }}
                     className="font-serif italic text-slate-400 text-sm mb-8"
                 >
-                    29 Maret 2026
+                    19 Juli 2026
                 </motion.p>
 
                 <motion.div
@@ -63,7 +63,7 @@ export const Footer: React.FC = () => {
                     </p>
 
                     <a
-                        href="https://api.whatsapp.com/send?text=Bismillahirrahmanirrahim%20%0AAssalamualaikum%20Wr.%20Wb.%20%0A%0ATanpa%20mengurangi%20rasa%20hormat%2C%20perkenankan%20kami%20mengundang%20Bapak%2FIbu%2FSaudara%2Fi%20untuk%20hadir%20dan%20memberikan%20doa%20restu%20pada%20acara%20pernikahan%20kami%3A%0A%0A%2ADanang%20%26%20Eva%2A%0A%F0%9F%93%85%2029%20Maret%202026%0A%0AInfo%20lengkap%20acara%20dan%20lokasi%20bisa%20dilihat%20pada%20undangan%20digital%20kami%20berikut%3A%0Ahttps%3A%2F%2Fwedinginvit.netlify.app%20%0A%0AMerupakan%20suatu%20kehormatan%20dan%20kebahagiaan%20apabila%20Anda%20berkenan%20hadir.%20%0A%0AWassalamualaikum%20Wr.%20Wb."
+                        href="https://api.whatsapp.com/send?text=Bismillahirrahmanirrahim%20%0AAssalamualaikum%20Wr.%20Wb.%20%0A%0ATanpa%20mengurangi%20rasa%20hormat%2C%20perkenankan%20kami%20mengundang%20Bapak%2FIbu%2FSaudara%2Fi%20untuk%20hadir%20dan%20memberikan%20doa%20restu%20pada%20acara%20pernikahan%20kami%3A%0A%0A%2AJazuli%20%26%20Alvina%2A%0A%F0%9F%93%85%2019%20Juli%202026%0A%0AInfo%20lengkap%20acara%20dan%20lokasi%20bisa%20dilihat%20pada%20undangan%20digital%20kami%20berikut%3A%0Ahttps%3A%2F%2Fwedinginvit.netlify.app%20%0A%0AMerupakan%20suatu%20kehormatan%20dan%20kebahagiaan%20apabila%20Anda%20berkenan%20hadir.%20%0A%0AWassalamualaikum%20Wr.%20Wb."
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 mt-6 px-6 py-3 rounded-full bg-green-500/10 hover:bg-green-500/20 text-green-500 border border-green-500/30 transition-all text-sm font-semibold mx-auto"

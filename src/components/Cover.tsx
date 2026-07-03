@@ -17,7 +17,7 @@ export const Cover: React.FC<CoverProps> = ({ isOpen, onOpen }) => {
                     transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
                     className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-slate-900 text-white overflow-hidden bg-cover bg-center"
                     style={{
-                        backgroundImage: "linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.8)), url('/master-photo.webp')"
+                        backgroundImage: "linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.8)), url('/cover-photo.jpeg')"
                     }}
                 >
                     <div className="absolute inset-0 floral-bg opacity-20 MixBlendMode-overlay pointer-events-none" />
@@ -34,7 +34,7 @@ export const Cover: React.FC<CoverProps> = ({ isOpen, onOpen }) => {
                         <span className="font-serif italic tracking-[0.3em] text-sm uppercase text-slate-300">The Wedding Of</span>
 
                         <h1 className="font-script text-6xl md:text-7xl mt-6 mb-8 pb-4 leading-relaxed text-primary drop-shadow-lg text-gradient-gold">
-                            Danang & Eva
+                            Jazuli & Alvina
                         </h1>
 
                         <div className="space-y-6 mb-12">

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Cover } from './components/Cover';
 import { Hero } from './components/Hero';
+import { OpeningQuote } from './components/OpeningQuote';
 import { GroomBride } from './components/GroomBride';
 import { EventDetails } from './components/EventDetails';
-import { Gallery } from './components/Gallery';
 import { DigitalEnvelope } from './components/DigitalEnvelope';
 import { RSVP } from './components/RSVP';
 import { FloatingAudioPlayer } from './components/FloatingAudioPlayer';
@@ -67,23 +67,21 @@ function App() {
           <Hero />
         </div>
 
+        <OpeningQuote />
+
         <SectionDivider variant="floral" />
 
         <div id="mempelai">
           <GroomBride />
         </div>
 
-        <SectionDivider variant="gold-line" />
+        <SectionDivider variant="floral" />
 
         <div id="acara">
           <EventDetails />
         </div>
 
         <SectionDivider variant="floral" />
-
-        <Gallery />
-
-        <SectionDivider variant="gold-line" />
 
         <DigitalEnvelope />
 

@@ -33,7 +33,9 @@ export const DigitalEnvelope: React.FC = () => {
                         </div>
 
                         <div className="relative z-10 flex flex-col items-center">
-                            <img src="/bri-logo.webp" alt="Bank BRI" className="h-6 mb-2" />
+                            <div className="bg-primary/10 dark:bg-primary/20 w-12 h-12 rounded-full flex items-center justify-center mb-3">
+                                <span className="material-symbols-outlined text-primary text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>account_balance</span>
+                            </div>
                             <p className="text-2xl font-mono text-primary tracking-widest mb-1">209601007437534</p>
                             <p className="text-xs text-slate-500 uppercase font-semibold tracking-wider mb-4">a.n Nariswara Danang Prasetya Aji</p>
 
@@ -56,7 +58,9 @@ export const DigitalEnvelope: React.FC = () => {
                         </div>
 
                         <div className="relative z-10 flex flex-col items-center">
-                            <img src="/bri-logo.webp" alt="Bank BRI" className="h-6 mb-2" />
+                            <div className="bg-primary/10 dark:bg-primary/20 w-12 h-12 rounded-full flex items-center justify-center mb-3">
+                                <span className="material-symbols-outlined text-primary text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>account_balance</span>
+                            </div>
                             <p className="text-2xl font-mono text-primary tracking-widest mb-1">602501008550532</p>
                             <p className="text-xs text-slate-500 uppercase font-semibold tracking-wider mb-4">a.n Eva Kurnia Damayanti</p>
 

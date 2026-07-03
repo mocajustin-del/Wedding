@@ -15,7 +15,7 @@ export const EventDetails: React.FC = () => {
     });
 
     useEffect(() => {
-        const targetDate = new Date('March 29, 2026 09:00:00').getTime();
+        const targetDate = new Date('July 19, 2026 08:00:00').getTime();
         const timer = setInterval(() => {
             const now = new Date().getTime();
             const distance = targetDate - now;
@@ -86,7 +86,7 @@ export const EventDetails: React.FC = () => {
                             <span className="material-symbols-outlined text-primary">menu_book</span>
                         </div>
                         <h3 className="font-serif italic text-sm text-slate-500 dark:text-slate-400 mb-1">Akad Nikah</h3>
-                        <h4 className="font-serif text-2xl font-bold text-navy-custom dark:text-white">Minggu, 29 Maret 2026</h4>
+                        <h4 className="font-serif text-2xl font-bold text-navy-custom dark:text-white mb-4">Minggu, 19 Juli 2026</h4>
                     </div>
 
                     <div className="grid grid-cols-2 gap-4 relative">
@@ -99,7 +99,7 @@ export const EventDetails: React.FC = () => {
                         <div className="space-y-2 p-2 relative z-10">
                             <span className="material-symbols-outlined text-primary text-xl">location_on</span>
                             <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider">Lokasi</p>
-                            <p className="text-sm font-bold leading-tight text-slate-800 dark:text-slate-200">Kaliori, Rembang</p>
+                            <p className="text-sm font-bold leading-tight text-slate-800 dark:text-slate-200">Dsn. Krajan 03/02, Tanggungharjo</p>
                         </div>
                     </div>
                 </div>
@@ -123,10 +123,10 @@ export const EventDetails: React.FC = () => {
                             <span className="material-symbols-outlined text-primary">event</span>
                         </div>
                         <h3 className="font-serif italic text-sm text-slate-500 dark:text-slate-400 mb-1">Resepsi Pernikahan</h3>
-                        <h4 className="font-serif text-2xl font-bold text-navy-custom dark:text-white mb-4">Minggu, 29 Maret 2026</h4>
+                        <h4 className="font-serif text-2xl font-bold text-navy-custom dark:text-white mb-4">Minggu, 19 Juli 2026</h4>
 
                         <a
-                            href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Pernikahan+Danang+%26+Eva&dates=20260329T010000Z/20260329T060000Z&details=Merupakan+suatu+kehormatan+dan+kebahagiaan+bagi+kami+apabila+Bapak/Ibu/Saudara/i+berkenan+hadir.&location=Kaliori,+Rembang"
+                            href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Pernikahan+Jazuli+%26+Alvina&dates=20260719T010000Z/20260719T060000Z&details=Merupakan+suatu+kehormatan+dan+kebahagiaan+bagi+kami+apabila+Bapak/Ibu/Saudara/i+berkenan+hadir.&location=Dusun+Krajan+03%2F02%2C+Desa+Tanggungharjo%2C+Kec.+Tanggungharjo%2C+Grobogan"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-primary/30 text-primary dark:text-primary hover:bg-primary/10 transition-colors text-xs font-bold uppercase tracking-wider mx-auto"
@@ -140,13 +140,13 @@ export const EventDetails: React.FC = () => {
                         <div className="space-y-2 p-2 relative z-10">
                             <span className="material-symbols-outlined text-primary text-xl">schedule</span>
                             <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider">Waktu</p>
-                            <p className="text-sm font-bold text-slate-800 dark:text-slate-200">09.00 - Selesai</p>
+                            <p className="text-sm font-bold text-slate-800 dark:text-slate-200">09.00 WIB - Selesai</p>
                         </div>
                         <div className="absolute left-1/2 top-4 bottom-4 w-px bg-slate-200 dark:bg-slate-700 transform -translate-x-1/2" />
                         <div className="space-y-2 p-2 relative z-10">
                             <span className="material-symbols-outlined text-primary text-xl">location_on</span>
                             <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider">Lokasi</p>
-                            <p className="text-sm font-bold leading-tight text-slate-800 dark:text-slate-200">Kaliori, Rembang</p>
+                            <p className="text-sm font-bold leading-tight text-slate-800 dark:text-slate-200">Dsn. Krajan 03/02, Tanggungharjo</p>
                         </div>
                     </div>
                 </div>
@@ -167,14 +167,14 @@ export const EventDetails: React.FC = () => {
                             <p className="text-xs font-semibold text-primary uppercase tracking-wider">Kediaman Mempelai Wanita</p>
                         </div>
                         <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed max-w-[200px] mx-auto">
-                            Dk. Cering RT 02 / RW 01 Ds. Mojowarno <br /> Kec. Kaliori – Rembang
+                            Dusun Krajan 03/02, Desa Tanggungharjo, Kec. Tanggungharjo, Grobogan
                         </p>
                     </div>
 
                     {/* Mini Map Preview */}
                     <div className="relative rounded-2xl overflow-hidden shadow-lg border border-slate-100 dark:border-slate-700">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.8!2d111.2606163!3d-6.7111921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwNDInNDAuMyJTIDExMcKwMTUnNDcuNSJF!5e0!3m2!1sid!2sid!4v1700000000000"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15840.428489811804!2d110.5975618!3d-7.0163351!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708dfd7c5ed2f7%3A0x7dcd1abf8b809d3b!2sTanggungharjo%2C%20Grobogan%20Regency%2C%20Central%20Java!5e0!3m2!1sen!2sid!4v1716382025732!5m2!1sen!2sid"
                             width="100%"
                             height="150"
                             style={{ border: 0 }}
@@ -192,7 +192,7 @@ export const EventDetails: React.FC = () => {
                     </div>
 
                     <a
-                        href="https://www.google.com/maps/place/6%C2%B042'40.3%22S+111%C2%B015'47.5%22E/@-6.7111921,111.2606163,17z"
+                        href="https://maps.google.com/?q=Tanggungharjo,Grobogan"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center w-full gap-2 bg-slate-900 dark:bg-primary hover:bg-slate-800 hover:dark:bg-primary/90 text-white px-6 py-4 rounded-xl text-sm font-semibold transition-all shadow-lg hover:shadow-xl active:scale-[0.98]"

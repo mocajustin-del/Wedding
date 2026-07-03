@@ -36,8 +36,8 @@ export const FloatingAudioPlayer: React.FC<FloatingAudioPlayerProps> = ({ isOpen
             <audio
                 ref={audioRef}
                 loop
-                // User's requested song: Bite My Lower Lips - eSNa
-                src="/master-audio.mp3"
+                // User's requested song
+                src="/background-music.mp3"
             />
             <motion.button
                 initial={{ opacity: 0, scale: 0.5, y: 50 }}

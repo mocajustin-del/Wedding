@@ -6,14 +6,11 @@ interface ProfileCardProps {
     role: string;
     parents: string;
     address?: string;
-    photo: string;
     delay: number;
     direction: 'left' | 'right';
-    bgPosition?: string;
-    bgSize?: string;
 }
 
-const ProfileCard: React.FC<ProfileCardProps> = ({ name, role, parents, address, photo, delay, direction, bgPosition = 'top center', bgSize = 'cover' }) => (
+const ProfileCard: React.FC<ProfileCardProps> = ({ name, role, parents, address, delay, direction }) => (
     <motion.div
         initial={{ opacity: 0, x: direction === 'left' ? -40 : 40 }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -21,21 +18,6 @@ const ProfileCard: React.FC<ProfileCardProps> = ({ name, role, parents, address,
         transition={{ duration: 0.8, delay }}
         className="text-center relative z-10"
     >
-        {/* Photo Frame */}
-        <div className="relative w-36 h-36 mx-auto mb-6">
-            {/* Decorative ring */}
-            <div className="absolute inset-0 rounded-full border-2 border-dashed border-primary/30 animate-[spin_20s_linear_infinite]" />
-            {/* Inner ring */}
-            <div className="absolute inset-1.5 rounded-full border border-primary/20" />
-            {/* Photo */}
-            <div className="absolute inset-3 rounded-full overflow-hidden shadow-lg shadow-primary/10 bg-slate-50 dark:bg-slate-800 bg-gradient-to-t from-pastel-blue/20 to-white/50">
-                <div
-                    className="w-full h-full bg-no-repeat transition-transform duration-500 hover:scale-110"
-                    style={{ backgroundImage: `url('${photo}')`, backgroundPosition: bgPosition, backgroundSize: bgSize }}
-                />
-            </div>
-        </div>
-
         {/* Name */}
         <h3 className="font-serif text-2xl font-bold text-navy-custom dark:text-white mb-2 leading-tight">
             {name}
@@ -43,9 +25,6 @@ const ProfileCard: React.FC<ProfileCardProps> = ({ name, role, parents, address,
 
         {/* Role badge */}
         <div className="inline-flex items-center gap-1.5 bg-primary/10 dark:bg-primary/20 rounded-full px-4 py-1.5 mb-4">
-            <span className="material-symbols-outlined text-primary text-xs" style={{ fontVariationSettings: "'FILL' 1" }}>
-                {direction === 'left' ? 'man' : 'woman'}
-            </span>
             <span className="text-[10px] text-primary font-bold tracking-widest uppercase">{role}</span>
         </div>
 
@@ -56,8 +35,8 @@ const ProfileCard: React.FC<ProfileCardProps> = ({ name, role, parents, address,
 
         {/* Address */}
         {address && (
-            <div className="flex items-center justify-center gap-1.5 mt-3">
-                <span className="material-symbols-outlined text-primary text-sm">location_on</span>
+            <div className="flex items-start justify-center gap-1.5 mt-3">
+                <span className="material-symbols-outlined text-primary text-sm mt-0.5">location_on</span>
                 <p className="text-xs text-slate-400 dark:text-slate-500 leading-relaxed">
                     {address}
                 </p>
@@ -93,14 +72,12 @@ export const GroomBride: React.FC = () => {
             <div className="max-w-sm mx-auto space-y-10">
                 {/* Groom */}
                 <ProfileCard
-                    name="Nariswara Danang Prasetya Aji, S.T."
-                    role="Putra Kedua dari"
-                    parents="Bapak Sutrisno Budiyanto & Ibu Suwantini"
-                    address="Ds. Sugihmanik, Kec. Tanggungharjo - Grobogan"
-                    photo="/3x4danang-removebg-preview.webp"
+                    name="Muhammad Syukron Jazuli"
+                    role="Putra dari"
+                    parents="Bapak Ahmad Muzayin & Ibu Martatik"
+                    address="Dusun Ringinsari 04/03, Desa Sugihmanik, Kec. Tanggungharjo, Grobogan"
                     delay={0}
                     direction="left"
-                    bgPosition="top center"
                 />
 
                 {/* Elegant Ampersand Divider */}
@@ -120,15 +97,12 @@ export const GroomBride: React.FC = () => {
 
                 {/* Bride */}
                 <ProfileCard
-                    name="Eva Kurnia Damayanti, S.Pd."
-                    role="Putri Pertama dari"
-                    parents="Bapak Walurat & Ibu Sri Wahyuni"
-                    address="Ds. Mojowarno, Kec. Kaliori – Rembang"
-                    photo="/3x4eva-removebg-preview.webp"
+                    name="Eva Alvina"
+                    role="Putri dari"
+                    parents="Bapak Kasminto (Bpk. Jamin) & Ibu Siti Munawaroh"
+                    address="Dusun Krajan 03/02, Desa Tanggungharjo, Kec. Tanggungharjo, Grobogan"
                     delay={0.1}
                     direction="right"
-                    bgPosition="top center"
-                    bgSize="80%"
                 />
             </div>
         </section>
