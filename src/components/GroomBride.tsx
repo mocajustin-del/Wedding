@@ -36,8 +36,8 @@ const ProfileCard: React.FC<ProfileCardProps> = ({ name, role, parents, address,
         {/* Address */}
         {address && (
             <div className="flex items-start justify-center gap-1.5 mt-3">
-                <span className="material-symbols-outlined text-primary text-sm mt-0.5">location_on</span>
-                <p className="text-xs text-slate-400 dark:text-slate-500 leading-relaxed">
+                <span className="material-symbols-outlined text-primary text-sm mt-0.5 shrink-0">location_on</span>
+                <p className="text-xs text-slate-400 dark:text-slate-500 leading-relaxed text-center">
                     {address}
                 </p>
             </div>

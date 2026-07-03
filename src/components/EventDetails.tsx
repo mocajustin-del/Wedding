@@ -174,7 +174,7 @@ export const EventDetails: React.FC = () => {
                     {/* Mini Map Preview */}
                     <div className="relative rounded-2xl overflow-hidden shadow-lg border border-slate-100 dark:border-slate-700">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15840.428489811804!2d110.5975618!3d-7.0163351!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708dfd7c5ed2f7%3A0x7dcd1abf8b809d3b!2sTanggungharjo%2C%20Grobogan%20Regency%2C%20Central%20Java!5e0!3m2!1sen!2sid!4v1716382025732!5m2!1sen!2sid"
+                            src="https://maps.google.com/maps?q=-7.0460012,110.9581147&z=15&output=embed"
                             width="100%"
                             height="150"
                             style={{ border: 0 }}
@@ -192,7 +192,7 @@ export const EventDetails: React.FC = () => {
                     </div>
 
                     <a
-                        href="https://maps.google.com/?q=Tanggungharjo,Grobogan"
+                        href="https://maps.app.goo.gl/TrJRTCejaLdEapgD7"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center w-full gap-2 bg-slate-900 dark:bg-primary hover:bg-slate-800 hover:dark:bg-primary/90 text-white px-6 py-4 rounded-xl text-sm font-semibold transition-all shadow-lg hover:shadow-xl active:scale-[0.98]"
