@@ -187,7 +187,7 @@ export const EventDetails: React.FC = () => {
                     {/* Mini Map Preview */}
                     <div className="relative rounded-2xl overflow-hidden shadow-lg border border-slate-100 dark:border-slate-700">
                         <iframe
-                            src="https://maps.google.com/maps?q=-7.0460012,110.9581147&z=15&output=embed"
+                            src="https://maps.google.com/maps?q=-7.0950394,110.5949554&t=&z=15&ie=UTF8&iwloc=&output=embed"
                             width="100%"
                             height="150"
                             style={{ border: 0 }}
@@ -205,7 +205,7 @@ export const EventDetails: React.FC = () => {
                     </div>
 
                     <a
-                        href="https://maps.app.goo.gl/TrJRTCejaLdEapgD7"
+                        href="https://maps.app.goo.gl/1Nip99kFSoidVNDz5?g_st=aw"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center w-full gap-2 bg-slate-900 dark:bg-primary hover:bg-slate-800 hover:dark:bg-primary/90 text-white px-6 py-4 rounded-xl text-sm font-semibold transition-all shadow-lg hover:shadow-xl active:scale-[0.98]"
