@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { supabase } from '../lib/supabase';
 
 interface RSVP {
     id: number;
@@ -20,9 +21,20 @@ export const RSVP: React.FC = () => {
     const [rsvps, setRsvps] = useState<RSVP[]>([]);
 
     useEffect(() => {
-        // Mock initial fetch for development
-        const mockRsvps: RSVP[] = [];
-        setRsvps(mockRsvps);
+        const fetchRsvps = async () => {
+            const { data, error } = await supabase
+                .from('rsvps')
+                .select('*')
+                .order('created_at', { ascending: false });
+            
+            if (error) {
+                console.error('Error fetching RSVPs:', error);
+            } else if (data) {
+                setRsvps(data as RSVP[]);
+            }
+        };
+
+        fetchRsvps();
     }, []);
 
     const handleSubmit = async (e: React.FormEvent) => {
@@ -30,18 +42,22 @@ export const RSVP: React.FC = () => {
         setIsSubmitting(true);
 
         try {
-            // Mock network delay
-            await new Promise(resolve => setTimeout(resolve, 800));
+            const { data, error } = await supabase
+                .from('rsvps')
+                .insert([
+                    {
+                        name: formData.name,
+                        attendance: formData.attendance,
+                        message: formData.message
+                    }
+                ])
+                .select();
 
-            const newRsvp: RSVP = {
-                id: Date.now(),
-                name: formData.name,
-                attendance: formData.attendance,
-                message: formData.message,
-                created_at: new Date().toISOString()
-            };
+            if (error) throw error;
 
-            setRsvps(prev => [newRsvp, ...prev]);
+            if (data && data.length > 0) {
+                setRsvps(prev => [data[0] as RSVP, ...prev]);
+            }
             setIsSubmitted(true);
             setFormData({ name: '', attendance: 'hadir', message: '' });
         } catch (error) {
