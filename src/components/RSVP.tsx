@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { supabase } from '../lib/supabase';
 
-interface RSVP {
+interface RSVPEntry {
     id: number;
     name: string;
     attendance: string;
@@ -18,7 +18,7 @@ export const RSVP: React.FC = () => {
     });
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false);
-    const [rsvps, setRsvps] = useState<RSVP[]>([]);
+    const [rsvps, setRsvps] = useState<RSVPEntry[]>([]);
 
     useEffect(() => {
         const fetchRsvps = async () => {
@@ -30,7 +30,7 @@ export const RSVP: React.FC = () => {
             if (error) {
                 console.error('Error fetching RSVPs:', error);
             } else if (data) {
-                setRsvps(data as RSVP[]);
+                setRsvps(data as RSVPEntry[]);
             }
         };
 
@@ -56,7 +56,7 @@ export const RSVP: React.FC = () => {
             if (error) throw error;
 
             if (data && data.length > 0) {
-                setRsvps(prev => [data[0] as RSVP, ...prev]);
+                setRsvps(prev => [data[0] as RSVPEntry, ...prev]);
             }
             setIsSubmitted(true);
             setFormData({ name: '', attendance: 'hadir', message: '' });

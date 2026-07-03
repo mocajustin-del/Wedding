@@ -4,10 +4,14 @@ import { motion } from 'framer-motion';
 export const DigitalEnvelope: React.FC = () => {
     const [copiedBank, setCopiedBank] = useState<string | null>(null);
 
-    const handleCopy = (text: string, bank: string) => {
-        navigator.clipboard.writeText(text);
-        setCopiedBank(bank);
-        setTimeout(() => setCopiedBank(null), 2000);
+    const handleCopy = async (text: string, bank: string) => {
+        try {
+            await navigator.clipboard.writeText(text);
+            setCopiedBank(bank);
+            setTimeout(() => setCopiedBank(null), 2000);
+        } catch {
+            alert('Gagal menyalin. Silakan salin manual: ' + text);
+        }
     };
 
     return (
@@ -38,7 +42,7 @@ export const DigitalEnvelope: React.FC = () => {
                             </div>
                             <p className="text-sm font-bold text-slate-700 dark:text-slate-300 mb-1">Bank Mandiri</p>
                             <p className="text-2xl font-mono text-primary tracking-widest mb-1">1360016086602</p>
-                            <p className="text-xs text-slate-500 uppercase font-semibold tracking-wider mb-4">a.n MUHAMMAD SYUKron JAZ</p>
+                            <p className="text-xs text-slate-500 uppercase font-semibold tracking-wider mb-4">a.n MUHAMMAD SYUKRON JAZ</p>
 
                             <button
                                 onClick={() => handleCopy('1360016086602', 'MANDIRI')}

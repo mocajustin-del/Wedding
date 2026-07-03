@@ -20,7 +20,7 @@ export const Cover: React.FC<CoverProps> = ({ isOpen, onOpen }) => {
                         backgroundImage: "linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.8)), url('/cover-photo.jpeg')"
                     }}
                 >
-                    <div className="absolute inset-0 floral-bg opacity-20 MixBlendMode-overlay pointer-events-none" />
+                    <div className="absolute inset-0 floral-bg opacity-20 mix-blend-overlay pointer-events-none" />
 
                     {/* Falling Petals Effect */}
                     <FallingPetals />

@@ -13,15 +13,17 @@ export const EventDetails: React.FC = () => {
         minutes: 0,
         seconds: 0,
     });
+    const [isPast, setIsPast] = useState(false);
 
     useEffect(() => {
         const targetDate = new Date('July 19, 2026 08:00:00').getTime();
-        const timer = setInterval(() => {
+
+        const calculateTimeLeft = () => {
             const now = new Date().getTime();
             const distance = targetDate - now;
 
             if (distance < 0) {
-                clearInterval(timer);
+                setIsPast(true);
                 return;
             }
 
@@ -31,8 +33,12 @@ export const EventDetails: React.FC = () => {
                 minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
                 seconds: Math.floor((distance % (1000 * 60)) / 1000),
             });
-        }, 1000);
+        };
 
+        // Calculate immediately on mount
+        calculateTimeLeft();
+
+        const timer = setInterval(calculateTimeLeft, 1000);
         return () => clearInterval(timer);
     }, []);
 
@@ -49,6 +55,12 @@ export const EventDetails: React.FC = () => {
                 <h2 className="font-script text-5xl text-primary mt-2">Menuju Hari Bahagia</h2>
 
                 {/* Countdown Timer */}
+                {isPast ? (
+                    <div className="mt-8 bg-primary/10 dark:bg-primary/20 rounded-2xl px-6 py-4 inline-block">
+                        <p className="font-serif italic text-primary text-sm">Acara telah berlangsung</p>
+                        <p className="text-xs text-slate-500 mt-1">Terima kasih atas doa restu Anda</p>
+                    </div>
+                ) : (
                 <div className="flex justify-center gap-3 mt-8">
                     {[
                         { label: 'Hari', value: timeLeft.days },
@@ -66,6 +78,7 @@ export const EventDetails: React.FC = () => {
                         </div>
                     ))}
                 </div>
+                )}
             </motion.div>
 
             {/* Akad Nikah Card */}
